@@ -18,7 +18,7 @@ router.post('/login', (req, res) => {
       iss: "http://amilton.com.br",
       aud: "qualquer coisa",
       sub: 1,
-      exp: moment().add(10, 'minutes').unix()
+      exp: moment().add(10, 'hours').unix()
     }
 
     const userClains = {

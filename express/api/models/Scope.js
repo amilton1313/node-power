@@ -1,10 +1,14 @@
 'use strict';
+// const config = require('../config/database')[env];
+
 const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Scope extends Model {
 
     static associate(models) {
-      // define association here
+      Scope.hasMany(models.Usuario, {
+        foreignKey: 'scope_id'
+      })
     }
   };
   Scope.init({
